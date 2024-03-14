@@ -47,7 +47,7 @@ h1,h2,h3,h4,h5,h6 {
     font-weight: bold;
     font-family: "sprat-regular";
     text-wrap: balance;
-    color: $clr-dark;
+    color: $clr-light;
 }
 
 h1 {
@@ -74,11 +74,11 @@ p {
     font-size: clamp(1.4rem, 6vw , 1.6rem);
     margin-bottom: 1.3rem;
     text-wrap: balance;
-    color: $clr-dark;
+    color: $clr-light;
 }
 
 .container {
-    max-width: 90rem;
+    max-width: 150rem;
     width: 100%;
     margin: 0 auto;
     padding: 0 1.2rem;
