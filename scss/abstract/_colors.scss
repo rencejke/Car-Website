@@ -1,6 +1,7 @@
 :root {
     --light : #fff;
     --dark : #343438;
+    --light-dark: #3e3e43; 
     --accent : #F9555C;
     --yellow : #f9b35a;
 }
@@ -8,6 +9,7 @@
 
 $clr-light: var(--light);
 $clr-dark: var(--dark);
+$clr-light-dark: var(--light-dark);
 $clr-accent: var(--accent);
 $clr-yellow: var(--yellow);
 

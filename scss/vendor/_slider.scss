@@ -1,6 +1,39 @@
 @use '../abstract' as  *;
 
-.tns-controls {
-  display: none;
+
+.tns-outer {
+  position: relative;
+  .tns-nav {
+    z-index: 999;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin-bottom: 1rem;
+    transform: translate(-50%);
+
+    button {
+      margin: 0 0.2rem;
+      width: 10px;
+      height: 10px;
+      border-radius: 100%;
+      border: none;
+      background-color: $clr-accent;
+    }
+
+    & button.tns-nav-active {
+      background-color: $clr-light;
+    }
+  }
+}
+
+
+.tns-controls{
+  @include flex(space-between, center);
+  margin: 3rem 0;
+}
+
+  button{
+      background: transparent;
+      border: none;
   
 }

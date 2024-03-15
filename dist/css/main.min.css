@@ -2,6 +2,7 @@
 :root {
   --light: #fff;
   --dark: #343438;
+  --light-dark: #3e3e43;
   --accent: #F9555C;
   --yellow: #f9b35a;
 }
@@ -471,27 +472,88 @@ p {
   font-size: 2.5rem;
 }
 
+.tns-outer {
+  position: relative;
+}
+.tns-outer .tns-nav {
+  z-index: 999;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin-bottom: 1rem;
+  transform: translate(-50%);
+}
+.tns-outer .tns-nav button {
+  margin: 0 0.2rem;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  border: none;
+  background-color: var(--accent);
+}
+.tns-outer .tns-nav button.tns-nav-active {
+  background-color: var(--light);
+}
+
 .tns-controls {
-  display: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 3rem 0;
+}
+
+button {
+  background: transparent;
+  border: none;
 }
 
 body {
   background-color: var(--dark);
 }
 
-.banner img {
-  width: 100%;
-  margin-left: 5rem;
+@media (max-width: 480px) {
+  .header__wrapper img {
+    width: 70%;
+  }
 }
 
+.banner img {
+  width: 100%;
+  height: 100%;
+  margin-left: 5rem;
+}
+@media (max-width: 480px) {
+  .banner img {
+    margin-left: 0;
+  }
+}
+
+.services {
+  margin-top: 3rem;
+  margin-left: 10rem;
+}
+@media (max-width: 480px) {
+  .services {
+    margin-left: 0;
+  }
+}
 .services__wrapper {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
+  background: var(--light-dark);
+}
+@media (max-width: 480px) {
+  .services__wrapper {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 1rem;
+    place-items: center;
+  }
 }
 .services__wrapper .card {
+  padding: 5rem 3rem;
   text-align: center;
-  padding: 10rem 5rem;
 }
 .services__wrapper .card h3 {
   text-transform: uppercase;
@@ -499,7 +561,7 @@ body {
 .services__wrapper .card h3:after {
   content: "";
   display: block;
-  padding-top: 5rem;
+  padding-top: 3rem;
   border-bottom: 5px solid gray;
   opacity: 0.3;
 }
@@ -509,11 +571,12 @@ body {
 .services__wrapper .card p {
   white-space: wrap;
   margin-bottom: 4rem;
+  font-size: 1.4rem;
 }
 .services__wrapper .card i {
   color: var(--light);
   padding: 1rem 0;
-  font-size: 8rem;
+  font-size: 7rem;
   margin-bottom: 3rem;
 }
 .services__wrapper .card button {
@@ -523,4 +586,197 @@ body {
   color: var(--light);
   text-transform: uppercase;
   font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.ImageService {
+  margin-left: 10rem;
+  margin-top: 3rem;
+}
+@media (max-width: 480px) {
+  .ImageService {
+    margin-left: 0;
+  }
+}
+.ImageService__wrapper {
+  padding: 5rem 5rem;
+  background-color: var(--accent);
+}
+.ImageService__header h4 {
+  font-size: 5rem;
+}
+.ImageService__header h4::after {
+  content: "";
+  display: block;
+  border-bottom: 2px solid var(--light);
+  opacity: 0.3;
+}
+
+.WhatWeDo {
+  margin-left: 10rem;
+  margin-top: 3rem;
+}
+@media (max-width: 480px) {
+  .WhatWeDo {
+    margin-left: 0;
+  }
+}
+.WhatWeDo__wrapper {
+  background-color: #fff;
+  padding: 5rem 5rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem;
+  gap: 3rem;
+}
+@media (max-width: 480px) {
+  .WhatWeDo__wrapper {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 1rem;
+  }
+}
+.WhatWeDo__wrapper h4, .WhatWeDo__wrapper p {
+  color: var(--dark);
+  font-family: "Ubuntu Condensed", sans-serif;
+}
+.WhatWeDo__wrapper ul li:nth-child(1) {
+  margin-top: 5rem;
+}
+.WhatWeDo__wrapper h4 {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+}
+.WhatWeDo__wrapper h4:after {
+  content: "";
+  display: block;
+  border-bottom: 2px solid gray;
+  opacity: 0.3;
+}
+.WhatWeDo__wrapper .text__left p {
+  text-wrap: balance;
+}
+.WhatWeDo__wrapper .text__left ul li:nth-child(1)::after {
+  display: block;
+  content: "";
+  border-bottom: 1px solid gray;
+  opacity: 0.4;
+}
+.WhatWeDo__wrapper .text__right p {
+  text-wrap: wrap;
+}
+.WhatWeDo__wrapper .text__right ul li:nth-child(2) {
+  color: var(--accent);
+  padding-bottom: 2rem;
+}
+.WhatWeDo__wrapper .text__right ul li:nth-child(2)::before {
+  content: "";
+  display: block;
+  border-top: 1px solid gray;
+  opacity: 0.4;
+}
+.WhatWeDo__wrapper .text__right ul li:nth-child(2)::after {
+  content: "";
+  display: block;
+  border-top: 1px solid gray;
+  border-bottom: 1px solid gray;
+  opacity: 0.4;
+}
+
+.cta {
+  margin-left: 10rem;
+  margin-top: 3rem;
+}
+@media (max-width: 480px) {
+  .cta {
+    margin-left: 0;
+  }
+}
+.cta__wrapper {
+  background: var(--light-dark);
+  padding: 5rem 5rem;
+}
+.cta__wrapper h2 {
+  font-size: 10rem;
+  font-family: "Ubuntu Condensed", sans-serif;
+}
+@media (max-width: 480px) {
+  .cta__wrapper h2 {
+    font-size: 3rem;
+  }
+}
+.cta__wrapper button {
+  background-color: var(--accent);
+  border: none;
+  padding: 2rem 3rem;
+  color: var(--light);
+  text-transform: uppercase;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+@media (max-width: 480px) {
+  .cta__wrapper button {
+    font-size: 1rem;
+  }
+}
+.cta__wrapper i {
+  color: var(--light);
+  font-size: 5rem;
+}
+.cta__wrapper div {
+  display: flex;
+  gap: 3rem;
+}
+
+.footer {
+  margin-left: 10rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+@media (max-width: 480px) {
+  .footer {
+    margin-left: 0;
+  }
+}
+.footer__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+@media (max-width: 480px) {
+  .footer__wrapper {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 1rem;
+  }
+}
+.footer__wrapper .socials {
+  padding: 3rem 5rem;
+}
+.footer__wrapper .socials small {
+  color: var(--light);
+}
+.footer__wrapper .socials ul {
+  display: flex;
+  gap: 2rem;
+}
+.footer__wrapper .socials ul li i {
+  color: var(--light);
+  margin-top: 5rem;
+}
+.footer__wrapper .address {
+  padding: 3rem 5rem;
+}
+.footer__wrapper .address p {
+  font-size: 1.3rem;
+  color: var(--light);
+}
+.footer__wrapper .address p:last-child {
+  margin-top: 3rem;
+}
+@media (max-width: 480px) {
+  .footer__wrapper iframe {
+    width: 90%;
+    margin: 0 auto;
+  }
 }/*# sourceMappingURL=main.min.css.map */
