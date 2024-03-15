@@ -1,6 +1,8 @@
 @use "../abstract/" as *;
 .header{
     
+    
+
     &__wrapper{
         padding: 1rem 5rem;
         @include flex(space-between, center);

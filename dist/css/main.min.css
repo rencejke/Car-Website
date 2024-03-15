@@ -35,7 +35,7 @@ html {
 }
 
 body {
-  font-family: "Roboto", arial, sans-serif;
+  font-family: "Ubuntu Condensed", sans-serif;
   color: rgba(var(--dark), 0.7);
   background-color: var(--light);
   line-height: 1.6;
@@ -57,9 +57,13 @@ ul {
   color: var(--dark);
 }
 
+button, p {
+  font-family: "Ubuntu Condensed", sans-serif;
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
-  font-family: "sprat-regular";
+  font-family: "Ubuntu Condensed", sans-serif;
   text-wrap: balance;
   color: var(--light);
 }
@@ -472,6 +476,46 @@ p {
   font-size: 2.5rem;
 }
 
+@media (max-width: 480px) {
+  .tns-controls {
+    position: absolute;
+    bottom: 28rem;
+    left: 60%;
+    display: flex;
+    gap: 0.5rem;
+  }
+  .tns-controls button {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--light);
+    border: none;
+    color: var(--dark);
+  }
+}
+@media (min-width: 1174px) {
+  .tns-controls {
+    position: absolute;
+    bottom: 28rem;
+    left: 80%;
+    display: flex;
+    gap: 0.5rem;
+  }
+  .tns-controls button {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--light);
+    border: none;
+    color: var(--dark);
+  }
+}
 .tns-controls {
   display: flex;
   justify-content: space-between;
@@ -489,8 +533,14 @@ body {
 }
 
 @media (max-width: 480px) {
+  .header {
+    margin-left: 0;
+  }
+}
+@media (max-width: 480px) {
   .header__wrapper img {
     width: 50%;
+    margin-left: 0;
   }
 }
 
@@ -503,7 +553,6 @@ body {
   left: 70%;
   font-size: 7rem;
   line-height: 0.9;
-  font-family: "Ubuntu Condensed", sans-serif;
 }
 @media (max-width: 480px) {
   .banner__wrapper h1 {
@@ -562,9 +611,6 @@ body {
   border-bottom: 5px solid gray;
   opacity: 0.3;
 }
-.services__wrapper .card h3, .services__wrapper .card p, .services__wrapper .card button {
-  font-family: "Ubuntu Condensed", sans-serif;
-}
 .services__wrapper .card p {
   white-space: wrap;
   margin-bottom: 4rem;
@@ -589,6 +635,7 @@ body {
 .imageservice {
   margin-left: 10rem;
   margin-top: 3rem;
+  position: relative;
 }
 @media (max-width: 480px) {
   .imageservice {
@@ -628,7 +675,7 @@ body {
 }
 @media (max-width: 480px) {
   .whatwedo__wrapper {
-    padding: 10rem;
+    padding: 3rem;
   }
 }
 @media (max-width: 480px) {
@@ -638,9 +685,15 @@ body {
     grid-gap: 1rem;
   }
 }
+@media (max-width: 480px) {
+  .whatwedo__wrapper p {
+    font-size: 1.5rem;
+    text-wrap: pretty;
+    text-align: justify;
+  }
+}
 .whatwedo__wrapper h4, .whatwedo__wrapper p {
   color: var(--dark);
-  font-family: "Ubuntu Condensed", sans-serif;
 }
 .whatwedo__wrapper ul li:nth-child(1) {
   margin-top: 5rem;
@@ -654,6 +707,11 @@ body {
   display: block;
   border-bottom: 2px solid gray;
   opacity: 0.3;
+}
+@media (max-width: 480px) {
+  .whatwedo__wrapper h4:after {
+    margin-top: 1rem;
+  }
 }
 .whatwedo__wrapper .text__left p {
   text-wrap: balance;
@@ -700,7 +758,6 @@ body {
 }
 .cta__wrapper h2 {
   font-size: 10rem;
-  font-family: "Ubuntu Condensed", sans-serif;
 }
 @media (max-width: 480px) {
   .cta__wrapper h2 {
@@ -775,6 +832,10 @@ body {
 }
 .footer__wrapper .address p:last-child {
   margin-top: 3rem;
+}
+.footer__wrapper iframe {
+  width: 60%;
+  margin: 0 auto;
 }
 @media (max-width: 480px) {
   .footer__wrapper iframe {

@@ -1,22 +1,51 @@
 @use '../abstract' as  *;
 
-// .tns-controls {
-//   position: absolute;
-//   bottom: 5rem;
-//   left: 5rem;
-//   display: flex ;
-//   gap: 2rem;
-//   button {
-//     width: 5rem;
-//     height: 5rem;
-//     border-radius: 50%;
-//     @include flex(center, center);
-//     background-color: coral;
-//     border: none;
-//    color: $clr-light; 
 
-//   }
-// }
+
+@include respondTo(smartphone)
+{
+  .tns-controls {
+    position: absolute;
+    bottom: 28rem;
+    left: 60%;
+    display: flex ;
+    gap: .5rem;
+    button {  
+      width: 4rem;
+      height: 4rem;
+      border-radius: 80%;
+      @include flex(center, center);
+      background-color: $clr-light;
+      border: none;
+     color: $clr-dark; 
+  
+    }
+  }
+}
+
+
+@include respondTo(desktop)
+{
+  .tns-controls {
+    position: absolute;
+    bottom: 28rem;
+    left: 80%;
+    display: flex ;
+    gap: .5rem;
+    button {
+      width: 4rem;
+      height: 4rem;
+      border-radius: 80%;
+      @include flex(center, center);
+      background-color: $clr-light;
+      border: none;
+     color: $clr-dark; 
+  
+    }
+  }
+}
+
+
 
 
 .tns-controls{
