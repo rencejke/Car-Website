@@ -17,7 +17,7 @@ body
     {
         @include respondTo(smartphone)
         {
-            width: 70%;
+            width: 50%;
            
         }
           
@@ -28,6 +28,29 @@ body
 
 .banner
 {
+
+    &__wrapper
+    {
+        position: relative;
+
+    h1
+    {
+        position: absolute;
+        bottom: 23rem;
+        left: 70%;
+        font-size: 7rem;
+        line-height: .9;
+        font-family: "Ubuntu Condensed", sans-serif;
+
+        @include respondTo(smartphone)
+        {
+           margin-left: 0;
+           bottom: 10rem;
+           left: 65%;
+           font-size: 2.5rem;
+        }
+    }
+
     img
     {
         width: 100%;
@@ -37,10 +60,13 @@ body
      @include respondTo(smartphone)
      {
         margin-left: 0;
+        height: 30vh;
         
         }
         
     }
+    }
+    
 }
 
 .services
@@ -69,6 +95,9 @@ body
      .card
           {        
             padding: 5rem 3rem;
+
+   
+
             text-align: center;
             h3
             {
@@ -119,7 +148,7 @@ body
   
 }
 
-.ImageService
+.imageservice
 {
     margin-left: 10rem;
     margin-top: 3rem;
@@ -154,7 +183,7 @@ body
 }
 
 
-.WhatWeDo
+.whatwedo //whatwedo
 {
     margin-left: 10rem;
     margin-top: 3rem;
@@ -169,6 +198,12 @@ body
     {
         background-color: #fff;
         padding: 5rem 5rem;
+
+        @include respondTo(smartphone)
+        {
+           padding: 10rem
+           
+        }
         @include grid(2);
         gap: 3rem;   
 
